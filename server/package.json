@@ -1,0 +1,46 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "dev": "env-cmd -f env/local.env nodemon index.js",
+        "start:dev": "env-cmd -f env/local.env node index.js",
+        "start": "env-cmd -f env/prod.env node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
+        "compression": "^1.7.4",
+        "cors": "^2.8.5",
+        "crypto-js": "^3.1.9-1",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "jwt-decode": "^2.2.0",
+        "lodash": "^4.17.15",
+        "mongoose": "^5.7.11",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "env-cmd": "^10.1.0",
+        "eslint": "^6.8.0",
+        "nodemon": "^1.19.4"
+    },
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "env": {
+            "es6": true
+        },
+        "ignorePatterns": [
+            "node_modules/"
+        ],
+        "parserOptions": {
+            "ecmaVersion": 8
+        }
+    }
+}
