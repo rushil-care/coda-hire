@@ -94,13 +94,19 @@ class BetPage extends Component {
             <>
                 <Header number={randomNo} />
                 <div className="bet-page-wrapper lr-pad-d lr-pad-m">
-                    <Button
-                        type="dashed"
-                        shape="circle"
-                        icon="left"
+                    <div
+                        className="f-d f-v-c c-pointer"
                         style={{ marginTop: 32 }}
                         onClick={this.onBtnClick}
-                    />
+                    >
+                        <Button
+                            type="dashed"
+                            shape="circle"
+                            icon="left"
+                            style={{ marginRight: 8 }}
+                        />
+                        <span>BACK</span>
+                    </div>
                     {/* <div className="random-banner"> Random Number {randomNo} </div> */}
                     <div className="player-card-wrap">{this.renderPlayers()}</div>
                 </div>

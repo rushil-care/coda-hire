@@ -8,8 +8,7 @@ const LeftPane = (props) => {
         let selectedPlayers = rowSelected.map((row, idx) => {
             let user_data = data[row];
             let { Name, Price, Bet } = user_data;
-            console.log("row", row);
-            console.log("data", data);
+
             let style = {
                 backgroundImage: "url(" + user_data["Profile Image"] + ")",
                 height: 45,
@@ -19,10 +18,10 @@ const LeftPane = (props) => {
                     <div className="img bg-image-full" style={style}></div>
                     <div className="user-desc f-d f-v-c f-h-sb">
                         <div>
-                            <div>{Name}</div>
-                            <div>{Bet}</div>
+                            <div className="h3-heading">{Name}</div>
+                            <div className="h5-heading">Bet: {Bet}</div>
                         </div>
-                        <div>{Price}</div>
+                        <div className="h5-heading">Price: {Price}</div>
                     </div>
                 </div>
             );
@@ -56,6 +55,8 @@ const LeftPane = (props) => {
                         position: fixed;
                         top: 0;
                         padding: 32px;
+                        font-size: 16px;
+                        color: var(--carbon);
                     }
 
                     .player-sidebar .players-wrap {
